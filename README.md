@@ -2,7 +2,7 @@
 
 > **Building something meaningful, one commit at a time.**
 
-[![GitHub Streak](https://streak-stats.demolab.com/?user=YOUR_USERNAME)](https://git.io/streak-stats)
+[![GitHub Streak](https://streak-stats.demolab.com/?user=rizinthehub)](https://git.io/streak-stats)
 
 ---
 
