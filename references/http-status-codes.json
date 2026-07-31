@@ -1,0 +1,82 @@
+{
+  "info": "HTTP Status Codes Quick Reference",
+  "version": "2026.1",
+  "lastUpdated": "2026-07-31",
+  
+  "categories": {
+    "1xx": {
+      "name": "Informational",
+      "description": "Request received, continuing process",
+      "codes": {
+        "100": { "name": "Continue", "description": "Server has received the request headers" },
+        "101": { "name": "Switching Protocols", "description": "Requester has asked to switch protocols" },
+        "102": { "name": "Processing", "description": "Server has received and is processing the request" }
+      }
+    },
+    "2xx": {
+      "name": "Success",
+      "description": "Request was successfully received, understood, and accepted",
+      "codes": {
+        "200": { "name": "OK", "description": "Standard success response" },
+        "201": { "name": "Created", "description": "Resource successfully created" },
+        "202": { "name": "Accepted", "description": "Request accepted for processing" },
+        "204": { "name": "No Content", "description": "Success with no content to return" }
+      }
+    },
+    "3xx": {
+      "name": "Redirection",
+      "description": "Further action must be taken to complete the request",
+      "codes": {
+        "301": { "name": "Moved Permanently", "description": "Resource has permanently moved" },
+        "302": { "name": "Found", "description": "Resource temporarily moved" },
+        "304": { "name": "Not Modified", "description": "Cached version is still valid" },
+        "307": { "name": "Temporary Redirect", "description": "Temporary redirect, keep method" }
+      }
+    },
+    "4xx": {
+      "name": "Client Errors",
+      "description": "Request contains bad syntax or cannot be fulfilled",
+      "codes": {
+        "400": { "name": "Bad Request", "description": "Malformed request syntax" },
+        "401": { "name": "Unauthorized", "description": "Authentication required" },
+        "403": { "name": "Forbidden", "description": "Server refuses to authorize" },
+        "404": { "name": "Not Found", "description": "Resource does not exist" },
+        "405": { "name": "Method Not Allowed", "description": "HTTP method not supported" },
+        "409": { "name": "Conflict", "description": "Request conflicts with current state" },
+        "422": { "name": "Unprocessable Entity", "description": "Valid but semantically incorrect" },
+        "429": { "name": "Too Many Requests", "description": "Rate limit exceeded" }
+      }
+    },
+    "5xx": {
+      "name": "Server Errors",
+      "description": "Server failed to fulfill a valid request",
+      "codes": {
+        "500": { "name": "Internal Server Error", "description": "Generic server error" },
+        "501": { "name": "Not Implemented", "description": "Feature not implemented" },
+        "502": { "name": "Bad Gateway", "description": "Invalid response from upstream" },
+        "503": { "name": "Service Unavailable", "description": "Server temporarily overloaded" },
+        "504": { "name": "Gateway Timeout", "description": "Upstream server timed out" }
+      }
+    }
+  },
+  
+  "commonPatterns": {
+    "CRUD": {
+      "CREATE": "201 Created",
+      "READ": "200 OK",
+      "UPDATE": "200 OK",
+      "DELETE": "204 No Content"
+    },
+    "Authentication": {
+      "Login Success": "200 OK",
+      "Invalid Credentials": "401 Unauthorized",
+      "Token Expired": "401 Unauthorized",
+      "No Permission": "403 Forbidden"
+    },
+    "Validation": {
+      "Invalid Input": "400 Bad Request",
+      "Missing Field": "400 Bad Request",
+      "Invalid Format": "422 Unprocessable Entity"
+    }
+  }
+}
