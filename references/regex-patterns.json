@@ -1,0 +1,79 @@
+{
+  "info": "Common Regular Expression Patterns",
+  "version": "1.0",
+  
+  "patterns": {
+    "email": {
+      "pattern": "^[\\w.-]+@[\\w.-]+\\.\\w{2,}$",
+      "description": "Basic email validation"
+    },
+    "url": {
+      "pattern": "^https?:\\/\\/[\\w.-]+(?:\\.[\\w.-]+)+[\\w\\-._~:/?#[\\]@!$&'()*+,;=]*$",
+      "description": "HTTP/HTTPS URLs"
+    },
+    "phone": {
+      "pattern": "^\\+?[1-9]\\d{1,14}$",
+      "description": "International phone numbers"
+    },
+    "ipv4": {
+      "pattern": "^((25[0-5]|2[0-4]\\d|[01]?\\d\\d?)\\.){3}(25[0-5]|2[0-4]\\d|[01]?\\d\\d?)$",
+      "description": "IPv4 address"
+    },
+    "date": {
+      "pattern": "^\\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01])$",
+      "description": "YYYY-MM-DD format"
+    },
+    "time24": {
+      "pattern": "^([01]\\d|2[0-3]):([0-5]\\d)(:[0-5]\\d)?$",
+      "description": "24-hour time (HH:MM or HH:MM:SS)"
+    },
+    "hexColor": {
+      "pattern": "^#?([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$",
+      "description": "Hex color codes"
+    },
+    "username": {
+      "pattern": "^[a-zA-Z0-9_]{3,16}$",
+      "description": "Alphanumeric username (3-16 chars)"
+    },
+    "password": {
+      "pattern": "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)[a-zA-Z\\d@$!%*?&]{8,}$",
+      "description": "Min 8 chars, upper, lower, number"
+    },
+    "slug": {
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+      "description": "URL-friendly slug"
+    },
+    "creditCard": {
+      "pattern": "^\\d{4}[- ]?\\d{4}[- ]?\\d{4}[- ]?\\d{4}$",
+      "description": "Credit card number"
+    },
+    "zipCode": {
+      "pattern": "^\\d{5}(-\\d{4})?$",
+      "description": "US ZIP code"
+    }
+  },
+  
+  "commonFlags": {
+    "g": "Global - find all matches",
+    "i": "Case insensitive",
+    "m": "Multiline mode",
+    "s": "Dotall - . matches newlines"
+  },
+  
+  "quickReference": {
+    ".": "Any character except newline",
+    "\\d": "Digit (0-9)",
+    "\\w": "Word character (a-z, A-Z, 0-9, _)",
+    "\\s": "Whitespace",
+    "*": "0 or more",
+    "+": "1 or more",
+    "?": "0 or 1",
+    "{n}": "Exactly n times",
+    "{n,}": "n or more times",
+    "{n,m}": "Between n and m times",
+    "^": "Start of string",
+    "$": "End of string",
+    "[abc]": "Any of a, b, or c",
+    "[^abc]": "Not a, b, or c"
+  }
+}
