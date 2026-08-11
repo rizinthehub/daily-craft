@@ -1,0 +1,79 @@
+{
+  "info": "Common JavaScript/TypeScript Error Messages",
+  "version": "1.0",
+
+  "typeErrors": {
+    "TS2322": {
+      "message": "Type 'X' is not assignable to type 'Y'",
+      "cause": "Type mismatch between expected and actual type",
+      "fix": "Add type assertion, cast, or adjust the type"
+    },
+    "TS2345": {
+      "message": "Argument of type 'X' is not assignable to parameter of type 'Y'",
+      "cause": "Passed wrong type to a function",
+      "fix": "Check function signature and adjust argument type"
+    },
+    "TS2531": {
+      "message": "Object is possibly 'null' or 'undefined'",
+      "cause": "Using potentially null value without check",
+      "fix": "Add null check or use optional chaining (?.)"
+    },
+    "TS7006": {
+      "message": "Parameter 'x' implicitly has an 'any' type",
+      "cause": "Missing type annotation on parameter",
+      "fix": "Add explicit type annotation"
+    }
+  },
+
+  "runtimeErrors": {
+    "TypeError": {
+      "examples": [
+        "Cannot read properties of undefined",
+        "Cannot set properties of null",
+        "X is not a function"
+      ],
+      "cause": "Accessing property/method on null/undefined",
+      "fix": "Add null checks, use optional chaining"
+    },
+    "ReferenceError": {
+      "examples": [
+        "X is not defined",
+        "Cannot access 'X' before initialization"
+      ],
+      "cause": "Using variable before declaration",
+      "fix": "Declare variable before use, check scope"
+    },
+    "SyntaxError": {
+      "examples": [
+        "Unexpected token",
+        "Missing initializer in const"
+      ],
+      "cause": "Invalid JavaScript syntax",
+      "fix": "Check syntax, brackets, semicolons"
+    },
+    "RangeError": {
+      "examples": [
+        "Invalid array length",
+        "Maximum call stack exceeded"
+      ],
+      "cause": "Value outside expected range or infinite recursion",
+      "fix": "Check array size, add recursion base case"
+    }
+  },
+
+  "promiseErrors": {
+    "UnhandledPromiseRejection": {
+      "message": "Unhandled promise rejection",
+      "cause": "Promise rejected without .catch() handler",
+      "fix": "Add .catch() or use try/catch with await"
+    }
+  },
+
+  "debuggingTips": [
+    "Use console.log() to trace values",
+    "Use typeof to check variable types",
+    "Use optional chaining (?.) for safe property access",
+    "Use nullish coalescing (??) for default values",
+    "Use Object.entries() to inspect objects"
+  ]
+}
