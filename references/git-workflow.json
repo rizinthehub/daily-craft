@@ -1,0 +1,88 @@
+{
+  "info": "Git Workflows and Best Practices",
+  "version": "1.0",
+
+  "workflows": {
+    "featureBranch": {
+      "steps": [
+        "git checkout main",
+        "git pull origin main",
+        "git checkout -b feature/your-feature",
+        "Make your changes",
+        "git add .",
+        "git commit -m 'feat: description'",
+        "git push -u origin feature/your-feature",
+        "Create Pull Request on GitHub",
+        "Review and merge"
+      ]
+    },
+    "hotfix": {
+      "steps": [
+        "git checkout main",
+        "git pull origin main",
+        "git checkout -b hotfix/issue-description",
+        "Fix the issue",
+        "git commit -m 'fix: description'",
+        "git push -u origin hotfix/issue-description",
+        "Create PR and merge immediately"
+      ]
+    }
+  },
+
+  "commitConventions": {
+    "types": {
+      "feat": "New feature",
+      "fix": "Bug fix",
+      "docs": "Documentation only",
+      "style": "Formatting, no code change",
+      "refactor": "Code change, no feature or fix",
+      "test": "Adding tests",
+      "chore": "Maintenance, dependencies"
+    },
+    "format": "<type>: <description>",
+    "examples": [
+      "feat: add user authentication",
+      "fix: resolve login redirect issue",
+      "docs: update README",
+      "refactor: simplify array logic"
+    ]
+  },
+
+  "bestPractices": [
+    "Commit early, push often",
+    "Write clear, concise commit messages",
+    "Keep commits focused (one logical change)",
+    "Pull before pushing to avoid conflicts",
+    "Use branches for features and fixes",
+    "Review your diff before committing",
+    "Never commit secrets or credentials",
+    "Use .gitignore for generated files"
+  ],
+
+  "undoMistakes": {
+    "unstaged": {
+      "command": "git checkout -- filename",
+      "description": "Discard changes to file"
+    },
+    "staged": {
+      "command": "git restore --staged filename",
+      "description": "Unstage a file"
+    },
+    "committed": {
+      "command": "git revert HEAD",
+      "description": "Create new commit undoing changes"
+    },
+    "lastCommit": {
+      "command": "git commit --amend",
+      "description": "Modify last commit message or add files"
+    }
+  },
+
+  "branchNaming": {
+    "feature": "feature/short-description",
+    "bugfix": "fix/issue-description",
+    "hotfix": "hotfix/urgent-issue",
+    "release": "release/v1.0.0",
+    "chore": "chore/task-description"
+  }
+}
