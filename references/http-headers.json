@@ -1,0 +1,54 @@
+{
+  "title": "Common HTTP Headers Reference",
+  "day": 35,
+  "request": {
+    "Accept": "Media types the client can handle, e.g. application/json",
+    "Accept-Encoding": "Compression formats the client supports, e.g. gzip, br",
+    "Accept-Language": "Preferred response languages, e.g. en-US, si-LK",
+    "Authorization": "Credentials for the request, e.g. Bearer <token>",
+    "Cache-Control": "Caching directives, e.g. no-cache, max-age=0",
+    "Content-Type": "Media type of the request body, e.g. application/json",
+    "Content-Length": "Size of the request body in bytes",
+    "Cookie": "Cookies previously set by the server",
+    "Host": "Target host and port of the request",
+    "If-None-Match": "Conditional request using an ETag value",
+    "If-Modified-Since": "Conditional request using a last-modified date",
+    "Origin": "Origin of the request (used in CORS)",
+    "Referer": "URL of the page that made the request",
+    "User-Agent": "Identifies the client software",
+    "X-Requested-With": "Commonly XMLHttpRequest to flag AJAX calls"
+  },
+  "response": {
+    "Access-Control-Allow-Origin": "Origins allowed to read the response (CORS)",
+    "Access-Control-Allow-Methods": "HTTP methods allowed for cross-origin requests",
+    "Access-Control-Allow-Headers": "Request headers allowed for cross-origin requests",
+    "Cache-Control": "Caching directives, e.g. public, max-age=3600",
+    "Content-Type": "Media type of the response body",
+    "Content-Encoding": "Compression applied to the body, e.g. gzip",
+    "Content-Disposition": "Inline display or attachment download with filename",
+    "ETag": "Version identifier of the resource for caching",
+    "Expires": "Date after which the response is considered stale",
+    "Last-Modified": "Date the resource was last changed",
+    "Location": "Redirect target or URL of a newly created resource",
+    "Retry-After": "Seconds or date to wait before retrying (used with 429/503)",
+    "Set-Cookie": "Sets a cookie on the client",
+    "Vary": "Request headers that affect the cached response",
+    "WWW-Authenticate": "Authentication scheme required (sent with 401)"
+  },
+  "security": {
+    "Content-Security-Policy": "Restricts sources of scripts, styles, images, etc.",
+    "Strict-Transport-Security": "Forces HTTPS for future requests, e.g. max-age=31536000",
+    "X-Content-Type-Options": "nosniff - prevents MIME type sniffing",
+    "X-Frame-Options": "DENY or SAMEORIGIN - prevents clickjacking",
+    "Referrer-Policy": "Controls how much referrer info is sent",
+    "Permissions-Policy": "Enables or disables browser features like camera, geolocation"
+  },
+  "commonContentTypes": {
+    "application/json": "JSON data",
+    "application/x-www-form-urlencoded": "HTML form data",
+    "multipart/form-data": "Form data with file uploads",
+    "text/html": "HTML document",
+    "text/plain": "Plain text",
+    "application/octet-stream": "Binary data / file download"
+  }
+}
